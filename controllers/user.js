@@ -2,7 +2,6 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
-const JWT_SECRET = 'your_jwt_secret';
 
 //signin function
 const signin = async (req, res) => {
