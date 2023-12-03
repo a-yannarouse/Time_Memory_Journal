@@ -4,10 +4,11 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
-const { signin, signup } = require("../controllers/user.js");
+const { signin, signup, google_auth } = require("../controllers/user.js");
 
 router.post("/signin", signin)
 router.post("/signup", signup)
+router.post("/google-auth", google_auth)
 
 
 

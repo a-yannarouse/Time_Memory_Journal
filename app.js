@@ -1,7 +1,7 @@
 //Imports
-require('dotenv').config();
-console.log('MongoDB URI:', process.env.MONGODB_URI);
+require('dotenv').config({path:'C:/Users/nawaf/Desktop/411/.env'})
 const tripsRouter = require('./routes/trips');
+const jwt = require('jsonwebtoken');
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 //Routes
-app.use('/user', usersRouter);
+app.use('/users', usersRouter);
 app.use('/trips', tripsRouter);
 
 // MongoDB Connection
