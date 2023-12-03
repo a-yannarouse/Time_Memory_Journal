@@ -1,4 +1,4 @@
-// routes/trips.js
+
 const express = require('express');
 const router = express.Router();
 const Trip = require('../models/Trip');
@@ -10,11 +10,11 @@ const requireAuth = (req, res, next) => {
   const token = req.headers.authorization;
 
   if (token) {
-    jwt.verify(token, 'secretkey', (err, decodedToken) => {
+    jwt.verify(token, process.env.JWT_SECRET, (err, decodedToken) => {
       if (err) {
         res.status(401).json({ message: 'Unauthorized' });
       } else {
-        req.user = decodedToken; // Adjust based on your token payload
+        req.user = decodedToken; 
         next();
       }
     });
