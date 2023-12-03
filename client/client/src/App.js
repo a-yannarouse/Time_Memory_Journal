@@ -1,10 +1,13 @@
 import './App.css';
 import { useEffect } from 'react';
+import { jwtDecode } from 'jwt-decode';
 import LoginSignUp from './Components/LoginSignUp/LoginSignUp';
 
 function App() {
   function handleCallbackResponse(response){
     console.log("Encoded JWT ID token:" + response.credential);
+    var userObject = jwtDecode(response.credential);
+    console.log(userObject);
   }
     useEffect(() => {
       /* global google */
