@@ -1,0 +1,107 @@
+/* Add a general font family that's easy to read and looks modern */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.trip-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px;
+  background-color: #f5f5f5; /* Light grey that complements many images */
+  color: #333; /* Dark grey color for text for better readability */
+}
+
+.trip-description {
+  flex: 1;
+  max-width: 45%; 
+  padding: 20px;
+  background-color: #ffffff; /* White background for the text */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.trip-description h1 {
+  color: #0056b3; /* A color that stands out, but not too stark */
+  font-size: 2em; /* Larger font size for the title */
+  margin-bottom: 0.5em; /* Spacing after the title */
+}
+
+.trip-description .trip-dates {
+  color: #999; /* Lighter text color for the date */
+  font-style: italic;
+  margin-bottom: 1em; /* Spacing after the date */
+}
+
+.trip-description p {
+  line-height: 1.6; /* More readable line spacing */
+  text-align: justify; /* Justify text for a cleaner look */
+}
+
+.button.back-button {
+  padding: 12px 20px; /* Larger padding for a bigger button */
+  background-color: #f44336; /* Color matching the 'Sign Out' button */
+  color: white;
+  font-size: 1em; /* Larger font size */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+  bottom: 10px; /* Position at the bottom of the description */
+  left: 10px; /* Align with the start of the description */
+}
+
+.button.back-button:hover {
+  background-color: #c23028; /* Slightly darker on hover */
+}
+
+.trip-image-container {
+  flex: 1;
+  max-width: 45%; 
+  padding: 20px;
+  background-color: #ffffff; /* White background for consistency */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trip-image {
+  border-radius: 8px; /* Rounded corners for the image */
+  max-height: 400px; /* Set a max-height for larger images */
+  width: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure it is not larger than its container */
+  margin-bottom: 20px;
+}
+
+.weather-info {
+  padding: 15px;
+  background-color: #f9f9f9; /* Light background for the weather section */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%; /* Ensure it takes up the full width of its container */
+}
+
+.weather-info h2 {
+  margin-bottom: 10px;
+  color: #0056b3; /* Color for the weather title */
+}
+
+.weather-info p {
+  margin: 5px 0;
+  color: #333; /* Dark color for better readability */
+  font-size: 1.1em;
+}
+
+.weather-info img {
+  margin-top: 10px;
+  width: 50px;
+  height: auto;
+}

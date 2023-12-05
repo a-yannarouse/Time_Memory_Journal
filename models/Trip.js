@@ -18,8 +18,11 @@ const tripSchema = new mongoose.Schema({
   left: {
     type: Date,
     required: true
+  },
+  pic: {
+    type: String,
+    required: true
   }
-  // You can add more fields as needed
 });
 
 const Trip = mongoose.model('Trip', tripSchema);

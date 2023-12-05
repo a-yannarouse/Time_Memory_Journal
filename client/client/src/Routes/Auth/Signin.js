@@ -25,9 +25,8 @@ const Signin = () => {
       if (data.success) {
         console.log('Google Sign-In successful:', data);
         localStorage.setItem('token', data.token);
-        console.log(data.user);
-        //localStorage.setItem('user', JSON.stringify(data.user));
-        window.location.href = '/'; // Redirect to home
+        localStorage.setItem('user', JSON.stringify(data.user));
+        window.location.href = '/journal'; // Redirect to home
       } else {
         alert(data.message);        
       }
@@ -72,7 +71,7 @@ const Signin = () => {
         console.log('Signin successful:', data);
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', JSON.stringify(data.result));
-        window.location.href = '/';
+        window.location.href = '/journal';
       } else {
         alert(data.message);
       }

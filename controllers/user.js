@@ -68,13 +68,13 @@ const google_auth = async (req, res) => {
 
             // If user does not exist, create a new user
             user = await User.create({
-                username: name, // or any other username logic
+                username: name, 
                 email,
-                password: hashedPassword, // Make sure to handle this properly!
+                password: hashedPassword, 
             });
         }
 
-        // Create a token for the user (adjust as per your JWT logic)
+        // Create a token for the user 
         const userToken = jwt.sign({ email: user.email, id: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
 
         res.status(200).json({success: true, user: user, token: userToken });
