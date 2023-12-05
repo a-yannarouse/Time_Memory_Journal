@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Ensure you are using react-router-dom for navigation
-import './Home.css'; // This will be your CSS file for styling
+import { Link } from 'react-router-dom'; 
+import './Home.css'; 
 
+//homepage component
 const Home = () => {
   return (
     <div className="home-container">

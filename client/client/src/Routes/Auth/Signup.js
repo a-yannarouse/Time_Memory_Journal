@@ -27,9 +27,7 @@ const Signup = () => {
       if (data.success) {
         console.log('Google Sign-In successful:', data);
         localStorage.setItem('token', data.token);
-        console.log(data.user);
-        //localStorage.setItem('user', JSON.stringify(data.user));
-        window.location.href = '/'; // Redirect to home
+        window.location.href = '/journal'; // Redirect to home
       } else {
         alert(data.message);        
       }
@@ -62,7 +60,6 @@ const Signup = () => {
       return;
     }
 
-    // Replace with your actual backend endpoint
     const endpoint = 'http://localhost:5000/users/signup';
     
     try {
@@ -76,20 +73,14 @@ const Signup = () => {
 
       const data = await response.json();
       if (response.ok) {
-        // Handle success - perhaps redirect or store the token
         console.log('Signup successful:', data);
-        // Assuming you want to save the token and user info in localStorage
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', JSON.stringify(data.result));
-        // Redirect to the dashboard or home page after signup
-        // Replace '/dashboard' with the path you want to redirect to
-        window.location.href = '/';
+        window.location.href = '/journal';
       } else {
-        // Handle errors - show message to the user
         alert(data.message);
       }
     } catch (error) {
-      // Handle network errors
       alert('Network error: ' + error.message);
     }
   };
