@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import "./Signin.css";
 
+import password_icon from '../Assets/password.png';
+import email_icon from '../Assets/email.png';
+
 const Signin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -81,17 +84,30 @@ const Signin = () => {
   };
 
   return (
-    <div className="signin-container">
+    <div className="container">
+      <div className="header">
+      <div className="text"> Welcome Back! </div>
+      <div className="underline"> </div>
+      </div>
       <form className="signin-form" onSubmit={handleSignin}>
-        <h2>Welcome Back</h2>
-        <input type="email" placeholder="Email" name="email" required  value={email}
-            onChange={(e) => setEmail(e.target.value)}/>
-        <input type="password" placeholder="Password" name="password" required value={password}
-            onChange={(e) => setPassword(e.target.value)}/>
+        <div className="inputs">
+          <div className="input">
+            <img src={email_icon} alt="" />
+            <input type="email" placeholder="Email" name="email" required value={email}
+              onChange={(e) => setEmail(e.target.value)}/>
+          </div>
+          <div className="input">
+            <img src={password_icon} alt="" />
+            <input type="password" placeholder="Password" name="password" required value={password}
+              onChange={(e) => setPassword(e.target.value)}/>
+          </div>
+        </div>
         <button type="submit">Sign In</button>
-        <p>Don't have an account? <a href="/signup">Sign Up</a></p>
-        <div className="separator"></div>
+        <div className="separator">
+          <span>Or</span>
+        </div>
         <div id="googleSignInButton"></div> {/* Google Sign-In button will be rendered here */}
+        <p>Don't have an account? <a href="/signup">Sign Up</a></p>
       </form>
     </div>
   );
