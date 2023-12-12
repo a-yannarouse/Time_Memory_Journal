@@ -1,5 +1,5 @@
 //Imports
-require('dotenv').config();
+require('dotenv').config({path:'C:/Users/nawaf/Desktop/411/.env'});
 const tripsRouter = require('./routes/trips');
 const jwt = require('jsonwebtoken');
 const express = require('express');
