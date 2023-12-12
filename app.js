@@ -1,5 +1,5 @@
 //Imports
-require('dotenv').config({path:'C:/Users/nawaf/Desktop/411/.env'})
+require('dotenv').config('/Users/lamaralsubhi/411/411');
 const tripsRouter = require('./routes/trips');
 const jwt = require('jsonwebtoken');
 const express = require('express');
@@ -20,11 +20,11 @@ app.use('/trips', tripsRouter);
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI)
-.then(() => {
-  console.log('Connected to MongoDB');
-}).catch(err => {
-  console.error('MongoDB connection error:', err);
-});
+  .then(() => {
+    console.log('Connected to MongoDB');
+  }).catch(err => {
+    console.error('MongoDB connection error:', err);
+  });
 
 // Start Server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
