@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import "./Signup.css";
 
+import user_icon from '../Assets/person.png'
+import password_icon from '../Assets/password.png'
+import email_icon from '../Assets/email.png'
+
 const Signup = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -86,24 +90,46 @@ const Signup = () => {
   };
 
   return (
-    <div className="signup-container">
+    <div className="container">
+      <div className="header">
+      <div className="text"> Welcome!</div>
+      <div className="underline"> </div>
+      </div>
     <form className="signup-form" onSubmit={handleSignup}>
-      <h2>Welcome to the Travel Journal!</h2>
-      <input type="text" placeholder="Username" name="username" required value={username}
-          onChange={(e) => setUsername(e.target.value)}/>
-      <input type="email" placeholder="Email" name="email" required  value={email}
-          onChange={(e) => setEmail(e.target.value)}/>
-      <input type="password" placeholder="Password" name="password" required value={password}
-          onChange={(e) => setPassword(e.target.value)}/>
-      <input type="password" placeholder="Confirm Password" name="confirmPassword" required value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}/>
-      <button type="submit">Signup</button>
-      <p>Already have an account? <a href="/signin">Login!</a></p>
-      <div className="separator"></div>
+      <div className="inputs">
+        <div className="input">
+          <img src={user_icon} alt="" />
+          <input type="text" placeholder="Username" name="username" required value={username}
+            onChange={(e) => setUsername(e.target.value)}/>
+        </div>
+
+        <div className="input">
+          <img src={email_icon} alt="" />
+          <input type="email" placeholder="Email" name="email" required  value={email}
+            onChange={(e) => setEmail(e.target.value)}/>
+        </div>
+
+        <div className="input">
+          <img src={password_icon} alt="" />
+          <input type="password" placeholder="Password" name="password" required value={password}
+            onChange={(e) => setPassword(e.target.value)}/>
+        </div>
+
+        <div className="input">
+          <img src={password_icon} alt="" />
+          <input type="password" placeholder="Confirm Password" name="confirmPassword" required value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}/>
+        </div>
+      </div>
+      <button type="submit">Sign up</button>
+      <div className="separator">
+          <span>Or</span>
+      </div>
       <div id="googleSignInButton"></div> {/* Google Sign-In button will be rendered here */}
+      <p>Already have an account? <a href="/signin">Login!</a></p>
     </form>
   </div>
   )
 }
 
-export default Signup
+export default Signup;
