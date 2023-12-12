@@ -1,0 +1,143 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 200px;
+    width: 600px;
+    background-color: #f7f7f7;
+    padding-bottom: 30px;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  .text {
+    color: #3c009d;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  
+  .underline{
+    width: 61px;
+    height: 6px;
+    background: #3c009d;
+    border-radius: 9px;
+  }
+
+  .inputs {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .input {
+    display: flex;
+    align-items: center; 
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    background: #eaeaea;
+    border-radius: 6px;
+  }
+
+  .input img{
+    margin: 0px 30px;
+  }
+
+  .input input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 19px;
+  }
+  .signin-form p {
+    padding-left: 62px;
+    margin-top: 50px;
+    color: #797979;
+    font-size: 18px;
+  }
+  .signin-form a {
+    color: #3c009d;
+    cursor: pointer; 
+  }
+  
+  .signin-form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 55px auto;
+    width: 250px;
+    height: 60px;
+    background-color: #4B4A67;
+    border-radius: 50px;
+    font-size: 23px;
+    font-weight: 800;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .signin-form button.google-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px auto;
+    width: 220px;
+    height: 59px;
+    border-radius: 50px;
+    font-weight: 700;
+  }
+  
+  .separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 50px 0;
+  }
+  
+  .separator span {
+    padding: 0 10px;
+    background: #f7f7f7; 
+    color: #000; 
+    z-index: 1; 
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px; 
+    background: #000; 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .separator::before {
+    left: 0;
+    right: 50%;
+    margin-right: 10px; 
+  }
+  
+  .separator::after {
+    left: 50%;
+    right: 0;
+    margin-left: 10px; 
+  }
+  
+  
+  
+  
+  
+
+  

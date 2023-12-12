@@ -1,5 +1,5 @@
 //Imports
-require('dotenv').config()
+require('dotenv').config();
 const tripsRouter = require('./routes/trips');
 const jwt = require('jsonwebtoken');
 const express = require('express');

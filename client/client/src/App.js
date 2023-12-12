@@ -1,8 +1,7 @@
 import './App.css';
-import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Signup from './Routes/Auth/Signup';
-import Signin from './Routes/Auth/Signin';
+import Signup from './Routes/Auth/Component/Login-SignUp/Signup';
+import Signin from './Routes/Auth/Component/Login-SignUp/Signin';
 import Home from './Routes/Home/Home';
 import Feed from './Routes/Home/Feed';
 import Entry from './Routes/Action/Entry';
