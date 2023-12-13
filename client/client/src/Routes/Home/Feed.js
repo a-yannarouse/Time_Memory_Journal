@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import './Feed.css';
 
 //user personal feed component
@@ -12,29 +12,29 @@ const Feed = () => {
     if (!isAuthenticated) {
       navigate('/signin');
     } else {
-        // Fetch trips only if authenticated
-        const fetchTrips = async () => {
-          try {
-            const response = await fetch('http://localhost:5000/trips', {
-              headers: {
-                Authorization: `Bearer ${localStorage.getItem('token')}`
-              }
-            });
-  
-            if (!response.ok) {
-              throw new Error('Failed to fetch trips');
+      // Fetch trips only if authenticated
+      const fetchTrips = async () => {
+        try {
+          const response = await fetch('http://localhost:5000/trips', {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem('token')}`
             }
-  
-            const fetchedTrips = await response.json();
-            setTrips(fetchedTrips);
-          } catch (error) {
-            console.error('Error fetching trips:', error);
+          });
+
+          if (!response.ok) {
+            throw new Error('Failed to fetch trips');
           }
-        };
-  
-        fetchTrips();
-      }
-    }, [isAuthenticated, navigate]); 
+
+          const fetchedTrips = await response.json();
+          setTrips(fetchedTrips);
+        } catch (error) {
+          console.error('Error fetching trips:', error);
+        }
+      };
+
+      fetchTrips();
+    }
+  }, [isAuthenticated, navigate]);
 
   if (!isAuthenticated) {
     return <div>Loading...</div>;
@@ -63,15 +63,15 @@ const Feed = () => {
       <div className="content">
         <h1>Welcome to Your Personal Journal</h1>
         <div className="journal-entries">
-            {trips.map(trip => (
-                <div key={trip._id} className="trip-entry" onClick={() => viewTripDetails(trip._id)}>
-                    <img src={trip.pic} alt={trip.destination} />
-                    <div className="trip-info">
-                        <h3>{trip.destination}</h3>
-                        <p className="date">{new Date(trip.arrived).toLocaleDateString()}</p>
-                    </div>
-                </div>
-            ))}
+          {trips.map(trip => (
+            <div key={trip._id} className="trip-entry" onClick={() => viewTripDetails(trip._id)}>
+              <img src={trip.pic} alt={trip.destination} />
+              <div className="trip-info">
+                <h3>{trip.destination}</h3>
+                <p className="date">{new Date(trip.arrived).toLocaleDateString()}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
