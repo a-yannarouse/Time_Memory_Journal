@@ -1,49 +1,63 @@
 .feed-container {
-    background-color: #add8e6; 
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .navbar {
-    background-color: #ffffff; 
-    padding: 10px 20px;
-    display: flex;
-    justify-content: flex-end;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .nav-button {
-    padding: 10px 15px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    background-color: #007bff; 
-    color: white;
-  }
-  
-  .nav-button:hover {
-    background-color: #0056b3; 
-  }
-  
-  .content {
-    background-color: #f8f8f8;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 2000px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
+  background-color: #B9C8A7;
+  /* Sage */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Playfair Display', serif;
+  /* Consistent font family */
+  font-weight: 700;
+  font-size: 18px;
+  /* Bold font weight */
+  color: #4B4A67;
+  /* english-violet for text */
+}
+
+.navbar {
+  background-color: #F0EAE6;
+  /* Isabelline */
+  /* timberwolf */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #8DB580;
+  /* Olivine */
+  color: #F0EAE6;
+  /* Isabelline */
+}
+
+.nav-button:hover {
+  background-color: #4F5453;
+  /* Davy's Gray */
+}
+
+.content {
+  background-color: #F0EAE6;
+  /* Isabelline */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
 .journal-entries {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
   justify-content: center;
@@ -52,7 +66,7 @@
 .trip-entry {
   background-color: #fff;
   border-radius: 8px;
-  overflow: hidden; 
+  overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
@@ -65,7 +79,7 @@
 
 .trip-entry img {
   width: 100%;
-  height: auto; 
+  height: auto;
   object-fit: cover;
 }
 
@@ -76,14 +90,15 @@
 
 .trip-entry .trip-info h3 {
   margin-top: 0;
-  color: #333;
-  font-size: 1.2em;
+  color: #4B4A67;
+  /* english-violet */
+  font-size: 1.6em;
+  /* Consistent heading size */
 }
 
 .trip-entry .trip-info .date {
   font-size: 0.9em;
-  color: #666;
-}
+  /* Consistent date size */
+  background-color: #FFF;
 
-  
-  
+}

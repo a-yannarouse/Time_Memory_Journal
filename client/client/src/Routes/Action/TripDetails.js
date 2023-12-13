@@ -5,7 +5,7 @@ import "./TripDetails.css"
 //component for trip details
 const TripDetail = () => {
   const [trip, setTrip] = useState(null);
-  const { tripId } = useParams(); 
+  const { tripId } = useParams();
   const [weather, setWeather] = useState(null);
   const navigate = useNavigate();
 
@@ -69,26 +69,26 @@ const TripDetail = () => {
 
   return (
     <div className="trip-detail-container">
-    <div className="trip-description">
-      <h1>{trip.destination}</h1>
-      <p className="trip-dates">{`From ${new Date(trip.arrived).toLocaleDateString()} to ${new Date(trip.left).toLocaleDateString()}`}</p>
-      <p>{trip.description}</p>
-    </div>
-    <div className="navigation-buttons">
+      <div className="trip-description">
+        <h1>{trip.destination}</h1>
+        <p className="trip-dates">{`From ${new Date(trip.arrived).toLocaleDateString()} to ${new Date(trip.left).toLocaleDateString()}`}</p>
+        <p>{trip.description}</p>
+      </div>
+      <div className="navigation-buttons">
         <button onClick={goBackToFeed} className="button back-button">My Journal</button>
-    </div>
-    <div className="trip-image-container">
+      </div>
+      <div className="trip-image-container">
         <img src={trip.pic} alt={`View of ${trip.destination}`} className="trip-image" />
         {weather && (
-            <div className="weather-info">
+          <div className="weather-info">
             <h2>Current Weather in {trip.destination}</h2>
             <p>Temperature: {weather.temp_c}°C</p>
             <p>Condition: {weather.condition.text}</p>
             <img src={weather.condition.icon} alt="Weather condition icon" />
-        </div>
+          </div>
         )}
       </div>
-  </div>
+    </div>
   );
 };
 
