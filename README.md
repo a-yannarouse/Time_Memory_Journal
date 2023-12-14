@@ -1,5 +1,6 @@
 Travel Memory Journal
 =
+Group #19: Nawaf Alghamdi, Lamar AlSubhi, A'yanna Rouse, Marisol Jimenez
 
 **Overview**: 
 
