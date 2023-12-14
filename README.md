@@ -2,6 +2,8 @@ Travel Memory Journal
 =
 Group #19: Nawaf Alghamdi, Lamar AlSubhi, A'yanna Rouse, Marisol Jimenez
 
+***[Video Showcase Link](https://drive.google.com/drive/folders/1r-obooMa26hrjhWdSUXBhfrpqs9DiEVL?usp=sharing)***
+
 **Overview**: 
 
 The Travel Memory Journal is an interactive platform designed for travelers to document and revisit their journeys. This digital journal allows users to record details of their trips, including the cities they visited, travel dates, and personal trip descriptions. Leveraging the Unsplash API, the application automatically enhances each entry with a top photo of the city visited. Additionally, the journal integrates current weather data for each city, providing users with a dynamic and immersive way to reflect on their travel experiences.
