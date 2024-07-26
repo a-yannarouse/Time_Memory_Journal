@@ -2,7 +2,7 @@ Travel Memory Journal
 =
 Group #19: Nawaf Alghamdi, Lamar AlSubhi, A'Yanna Rouse, Marisol Jimenez
 
-***[Video Showcase Link]([https://drive.google.com/drive/folders/1r-obooMa26hrjhWdSUXBhfrpqs9DiEVL?usp=sharing](https://drive.google.com/file/d/1stC3fcyj8kNFbZStK31kV6UU_Bs7T8JS/view?usp=drive_link))***
+***[Video Showcase Link]((https://drive.google.com/file/d/1stC3fcyj8kNFbZStK31kV6UU_Bs7T8JS/view?usp=drive_link))***
 
 **Overview**: 
 
